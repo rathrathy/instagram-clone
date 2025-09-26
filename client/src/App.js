@@ -6,6 +6,7 @@ import Profile from './components/profile/Profile';
 import Explore from './components/explore/Explore';
 import Header from './components/header/Header';
 import DataProvider from './context/DataProvider';
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import { getUser, userLogin } from './redux/features/userSlice';
 
