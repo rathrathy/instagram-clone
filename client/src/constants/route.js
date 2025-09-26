@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:8000';
+export const API_URL = 'https://insta-server-vkx3.onrender.com';
 
 export const routePath = {
     home        : '/',
