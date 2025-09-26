@@ -6,11 +6,11 @@ import Profile from './components/profile/Profile';
 import Explore from './components/explore/Explore';
 import Header from './components/header/Header';
 import DataProvider from './context/DataProvider';
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, Navigate, Outlet } from "react-router-dom"; // single impor
 
 import { getUser, userLogin } from './redux/features/userSlice';
 
-import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
+
 import { useSelector, useDispatch } from 'react-redux';
 
 const PrivateRoute = ({ isAuthenticated, ...props }) => {
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <DataProvider>
-      <BrowserRouter>
+      <Router>
         <Routes>
 
           <Route path='/signup' element={<Signup />} />
@@ -51,7 +51,7 @@ function App() {
           </Route>
           
         </Routes>
-      </BrowserRouter>
+      </Router>
     </DataProvider>
   );
 }
